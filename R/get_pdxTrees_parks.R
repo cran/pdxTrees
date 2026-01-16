@@ -68,7 +68,7 @@
 #'   \item{Latitude}{Latitude}
 #' }
 #' 
-#' @source \url{https://www.portlandoregon.gov/parks/article/433143}
+#' @source \url{https://www.portland.gov/trees/get-involved/tree-inventory#toc-street-tree-inventory}
 #' @importFrom rlang .data 
 #' @importFrom magrittr %>%
 #' 

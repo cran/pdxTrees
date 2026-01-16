@@ -93,10 +93,10 @@ library(leaflet.extras)
 
 # Making the leaf popup icon 
 greenLeaflittle <- makeIcon(
-  iconUrl = "http://leafletjs.com/examples/custom-icons/leaf-green.png",
+  iconUrl = "https://leafletjs.com/examples/custom-icons/leaf-green.png",
   iconWidth = 10, iconHeight = 20,
   iconAnchorX = 10, iconAnchorY = 10,
-  shadowUrl = "http://leafletjs.com/examples/custom-icons/leaf-shadow.png",
+  shadowUrl = "https://leafletjs.com/examples/custom-icons/leaf-shadow.png",
  shadowWidth = 10, shadowHeight = 15,
  shadowAnchorX = 5, shadowAnchorY = 5
 )

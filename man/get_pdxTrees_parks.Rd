@@ -4,7 +4,7 @@
 \alias{get_pdxTrees_parks}
 \title{Load the pdxTrees_parks data}
 \source{
-\url{https://www.portlandoregon.gov/parks/article/433143}
+\url{https://www.portland.gov/trees/get-involved/tree-inventory#toc-street-tree-inventory}
 }
 \usage{
 get_pdxTrees_parks(park = NULL)

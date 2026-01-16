@@ -4,7 +4,7 @@
 \alias{get_pdxTrees_streets}
 \title{Load the pdxTrees_streets data}
 \source{
-\url{https://www.portlandoregon.gov/parks/article/433143}
+\url{https://www.portland.gov/trees/get-involved/tree-inventory#toc-street-tree-inventory}
 }
 \usage{
 get_pdxTrees_streets(neighborhood = NULL)
@@ -27,7 +27,7 @@ Returns a data frame with 218602 rows and 23 variables:
     or whether the tree is at or near the end of its life (poor and dead trees).}
   \item{Site_Type}{Where along the street the tree was located.
   There are 8 different site types and more info can be found here:
-   \url{http://gis-pdx.opendata.arcgis.com/datasets/street-trees}}
+   \url{https://gis-pdx.opendata.arcgis.com/datasets/PDX::street-tree-inventory-active-records/about}}
   \item{Site_Size}{Categorical size of the site: Small, Medium, Large}
   \item{Site_Width}{How wide the site was in ft.}
   \item{Wires}{Whether or not the site had wires: High voltage,

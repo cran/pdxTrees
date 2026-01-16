@@ -1,8 +1,8 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set( echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE, comment = "#>",  fig.align = "center",
                        fig.retina = 2)
 
-## ---- include = TRUE, messgae = FALSE-----------------------------------------
+## ----include = TRUE, messgae = FALSE------------------------------------------
 # First make sure you have the package downloaded! 
 
 # devtools::install_github("mcconvil/pdxTrees")
@@ -22,7 +22,7 @@ library(forcats)
 pdxTrees_parks <- get_pdxTrees_parks()
 
 
-## ---- fig.width= 6, fig.height=4----------------------------------------------
+## ----fig.width= 6, fig.height=4-----------------------------------------------
 
 # A histogram of the inventory date 
 pdxTrees_parks %>%   
@@ -50,10 +50,10 @@ library(leaflet.extras)
 
 # Making the leaf popup icon 
 greenLeaflittle <- makeIcon(
-  iconUrl = "http://leafletjs.com/examples/custom-icons/leaf-green.png",
+  iconUrl = "https://leafletjs.com/examples/custom-icons/leaf-green.png",
   iconWidth = 10, iconHeight = 20,
   iconAnchorX = 10, iconAnchorY = 10,
-  shadowUrl = "http://leafletjs.com/examples/custom-icons/leaf-shadow.png",
+  shadowUrl = "https://leafletjs.com/examples/custom-icons/leaf-shadow.png",
  shadowWidth = 10, shadowHeight = 15,
  shadowAnchorX = 5, shadowAnchorY = 5
 )
@@ -125,7 +125,7 @@ berkeley_graph <- berkeley_prk %>%
                         legend.title = element_text(size = 6), 
                         legend.text = element_text(size= 4))
 
-## ---- out.width = "90%"-------------------------------------------------------
+## ----out.width = "90%"--------------------------------------------------------
 # Then adding the animation with gganimate functions 
 
  berkeley_graph + 
