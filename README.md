@@ -41,22 +41,15 @@ from 2010 to 2016, and the park trees were inventoried from 2017 to
 devtools::install_github("mcconvil/pdxTrees")
 ```
 
-    ## rlang     (1.1.6  -> 1.1.7 ) [CRAN]
-    ## lifecycle (1.0.4  -> 1.0.5 ) [CRAN]
-    ## pillar    (1.11.0 -> 1.11.1) [CRAN]
-    ## tibble    (3.3.0  -> 3.3.1 ) [CRAN]
-
     ## 
-    ## The downloaded binary packages are in
-    ##  /var/folders/zy/5n0x52fd13bc59n5553m3jn00000gn/T//RtmpRoErmG/downloaded_packages
     ## ── R CMD build ─────────────────────────────────────────────────────────────────
-    ## * checking for file ‘/private/var/folders/zy/5n0x52fd13bc59n5553m3jn00000gn/T/RtmpRoErmG/remotes1fad2e3be360/mcconvil-pdxTrees-599bb6a/DESCRIPTION’ ... OK
+    ## * checking for file ‘/private/var/folders/vc/5ztpg19d7f1dl3rr2z_5wnpm0000gq/T/RtmpeQZRkr/remotesd9002255e97e/mcconvil-pdxTrees-517a264/DESCRIPTION’ ... OK
     ## * preparing ‘pdxTrees’:
     ## * checking DESCRIPTION meta-information ... OK
     ## * checking for LF line-endings in source and make files and shell scripts
     ## * checking for empty or unneeded directories
     ## Omitted ‘LazyData’ from DESCRIPTION
-    ## * building ‘pdxTrees_0.4.0.tar.gz’
+    ## * building ‘pdxTrees_0.5.0.tar.gz’
 
 ## Update/Getting the data
 

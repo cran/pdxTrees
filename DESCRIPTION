@@ -1,6 +1,6 @@
 Package: pdxTrees
 Title: Data Package of Portland, Oregon Trees
-Version: 0.5.0
+Version: 0.5.1
 Authors@R: 
    c(person("Kelly",
            "McConville",
@@ -26,15 +26,15 @@ Encoding: UTF-8
 URL: https://github.com/mcconvil/pdxTrees
 BugReports: https://github.com/mcconvil/pdxTrees/issues
 RoxygenNote: 7.3.3
-Suggests: knitr, rmarkdown, leaflet, leaflet.extras, gganimate, infer,
-        moderndive, readr, utils, gifski, ggplot2, forcats
+Suggests: knitr, rmarkdown, leaflet, infer, moderndive, readr, utils,
+        ggplot2, forcats
 VignetteBuilder: knitr
 Imports: magrittr, rlang, dplyr
 NeedsCompilation: no
-Packaged: 2026-01-15 18:04:58 UTC; kstats
+Packaged: 2026-03-03 16:39:15 UTC; ksm025
 Author: Kelly McConville [aut, cre],
   Isabelle Caldwell [aut],
   OR City of Portland [cph],
   Nicholas Horton [ctb]
 Repository: CRAN
-Date/Publication: 2026-01-16 09:00:18 UTC
+Date/Publication: 2026-03-16 08:10:18 UTC

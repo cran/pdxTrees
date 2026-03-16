@@ -86,7 +86,7 @@ The following code creates an interactive map with `leaflet` and the `pdxTrees_p
 ```{R leaflet packages}
 # Loading the leaflet packages 
 library(leaflet)
-library(leaflet.extras)
+#library(leaflet.extras)
 ```
 
 ```{r leaflet graph, fig.width= 8, fig.height=6}
@@ -134,72 +134,6 @@ leaflet() %>%
 
 
 
-## Creating an animated graph using `gganimate` 
-
-```{R}
-library(gganimate)
-```
-
-Before you animate a graph with `gganimate` you have to create and save a graph with `ggplot2`.
-
-```{r animated graph}
-
-# Refactoring the categorical mature_size variable 
-berkeley_prk <- berkeley_prk %>%
- mutate(mature_size = fct_relevel(Mature_Size, "S", "M", "L"))
-
-
-# First creating the graph using ggplot and saving it! 
-berkeley_graph <- berkeley_prk %>%
-  # Piping in the data 
-                  ggplot(aes(x = Tree_Height,
-                              y = Pollution_Removal_value,
-                              color = Mature_Size)) + 
-  # Creating the scatterplot 
-                  geom_point(size = 2, alpha = 0.5) +
-                  theme_minimal() + 
-  # Adding the labels 
-                  labs(title = "Pollution Removal Value of
-                       Berkeley Park Trees",
-                       x = "Tree Height", 
-                       y = "Pollution Removal Value ($'s annually)", 
-                       color = "Mature Size") + 
-  # Adding a color palette 
-                  scale_color_brewer(type = "seq", palette = "Set1") + 
-  # Customizing the title font
-                  theme(plot.title = element_text(hjust = 0.5, 
-                                                  size = 8,
-                                                  face = "bold"), 
-                         axis.title.x = element_text(size = 6), 
-                         axis.text = element_text(size = 4),  
-                         axis.title.y = element_text(size = 6), 
-                        legend.title = element_text(size = 6), 
-                        legend.text = element_text(size= 4))
-```
-
-
-Now we can add animation! 
-
-
-```{R, out.width = "90%"}
-# Then adding the animation with gganimate functions 
-
- berkeley_graph + 
-  # Choosing which variable we want to annimate 
-  transition_states(states = Mature_Size,
-                    # How long each point stays before fading away 
-                    transition_length = 10,
-                    # Time the transition takes
-                    state_length = 8)  +    
-  # Animation for the points entering
-  enter_grow() +      
-  # Animation for the points exiting
-  exit_shrink()
-
-```
-
-Unsurprisingly it seems that large trees have the highest degree of pollution removal.  However, there is a lot of overlap between the categories that could likely be explained by other key variables, like `Species`.  This is a great opportunity to practice multivariate thinking!
-
 ## A Linear Regression
 
 Aside from visualizations, the data can also be used to build linear regression models, create confidence intervals, and perform many other forms of statistical inference. 
@@ -236,5 +170,5 @@ get_regression_table(mod)
 ```
 
 
-Looking at the graph and the slope coefficient from the regression table, it does seem like tree height positively correlates with pollution removal. In particular, with a $\hat\beta_1$ of $0.104$, we'd estimate that the `Pollution_Removal_value` increases by $0.104$ with each additional foot of `Tree_Height`.
+Looking at the graph and the slope coefficient from the regression table, it does seem like tree height positively correlates with pollution removal. In particular, with a $\hat\beta_1$ of $0.104$, we'd estimate that the `Pollution_Removal_value` increases by $\$0.104$ with each additional foot of `Tree_Height`.
 

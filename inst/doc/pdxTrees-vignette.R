@@ -44,7 +44,7 @@ pdxTrees_parks %>%
 ## ----leaflet packages---------------------------------------------------------
 # Loading the leaflet packages 
 library(leaflet)
-library(leaflet.extras)
+#library(leaflet.extras)
 
 ## ----leaflet graph, fig.width= 8, fig.height=6--------------------------------
 
@@ -86,59 +86,6 @@ leaflet() %>%
               popup = ~labels) %>%
   # Adding the mini map at the bottom right corner 
   addMiniMap()
-
-
-## -----------------------------------------------------------------------------
-library(gganimate)
-
-## ----animated graph-----------------------------------------------------------
-
-# Refactoring the categorical mature_size variable 
-berkeley_prk <- berkeley_prk %>%
- mutate(mature_size = fct_relevel(Mature_Size, "S", "M", "L"))
-
-
-# First creating the graph using ggplot and saving it! 
-berkeley_graph <- berkeley_prk %>%
-  # Piping in the data 
-                  ggplot(aes(x = Tree_Height,
-                              y = Pollution_Removal_value,
-                              color = Mature_Size)) + 
-  # Creating the scatterplot 
-                  geom_point(size = 2, alpha = 0.5) +
-                  theme_minimal() + 
-  # Adding the labels 
-                  labs(title = "Pollution Removal Value of
-                       Berkeley Park Trees",
-                       x = "Tree Height", 
-                       y = "Pollution Removal Value ($'s annually)", 
-                       color = "Mature Size") + 
-  # Adding a color palette 
-                  scale_color_brewer(type = "seq", palette = "Set1") + 
-  # Customizing the title font
-                  theme(plot.title = element_text(hjust = 0.5, 
-                                                  size = 8,
-                                                  face = "bold"), 
-                         axis.title.x = element_text(size = 6), 
-                         axis.text = element_text(size = 4),  
-                         axis.title.y = element_text(size = 6), 
-                        legend.title = element_text(size = 6), 
-                        legend.text = element_text(size= 4))
-
-## ----out.width = "90%"--------------------------------------------------------
-# Then adding the animation with gganimate functions 
-
- berkeley_graph + 
-  # Choosing which variable we want to annimate 
-  transition_states(states = Mature_Size,
-                    # How long each point stays before fading away 
-                    transition_length = 10,
-                    # Time the transition takes
-                    state_length = 8)  +    
-  # Animation for the points entering
-  enter_grow() +      
-  # Animation for the points exiting
-  exit_shrink()
 
 
 ## ----linear regression graph, warning = FALSE, fig.width = 6, fig.height = 4----
